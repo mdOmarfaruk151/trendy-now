@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Now</title>
+
+    <!-- Daisy UI and Tailwind CSS --> 
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.28.0/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- End -->
+    
+</head>
+
+<nav>
+    <div class="navbar bg-base-100 mt-5 text-stone-50 ">
+        <div class="flex-1 ">
+          <a class="btn btn-ghost normal-case text-xl ml-20 mr-10 " href="index.html"><span class="text-blue-600 font-bold">Trendy</span>Now</a>
+        </div>
+        <div class="flex-none">
+          <div >
+           <h1 class="mr-5 btn btn-ghost"><a href="index.html">News</a></h1>
+           
+          </div>
+          <div >
+            <h1 class="mr-5 btn btn-ghost"> <a href="blog.html">Blog</a></h1>
+            
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar mr-20">
+              <div class="w-10 rounded-full ">
+                <img src="https://placeimg.com/80/80/people" />
+              </div>
+            </label>
+           
+          </div>
+        </div>
+      </div>
+      <hr class="ml-20 mr-20 mt-3">
+</nav>
+
+<body>
+    <header>
+
+    </header>
+
+    <main >
+        
+      <section class="container mt-10 ">
+        
+       <!-- start-Q.1 -->
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-blue-800 rounded-box text-center mt-10 ml-20 mr-20 text-stone-50">
+            <div class="collapse-title text-xl font-medium">
+                Differences Between var, let, and const.
+            </div>
+            <div class="collapse-content"> 
+                <hr>
+                <div class="overflow-x-auto mt-2">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>var</th>
+                          <th>let</th>
+                          <th>const</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                          <th>1</th>
+                          <td>The scope of a var <br> variable is functional scope.</td>
+                          <td>The scope of a let <br> variable is block scope.</td>
+                          <td>The scope of a const <br> variable is block scope.</td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                          <th>2</th>
+                          <td>It can be updated and <br> re-declared into the scope.</td>
+                          <td>It can be updated but <br> cannot be re-declared into the scope.</td>
+                          <td>It cannot be updated or <br> re-declared into the scope.</td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                          <th>3</th>
+                          <td>It can be declared <br> without initialization.</td>
+                          <td>It can be declared <br> without initialization.</td>
+                          <td>It cannot be declared <br> without initialization.</td>
+                        </tr>
+                        <!-- row 4 -->
+                        <tr>
+                          <th>4</th>
+                          <td>It can be accessed without <br> initialization as its default value <br> is “undefined”.</td>
+                          <td>It cannot be accessed without <br> initialization otherwise it will give <br> ‘referenceError’.</td>
+                          <td>It cannot be accessed without <br> initialization, as it cannot be <br> declared without initialization.</td>
+                        </tr>
+                        <!-- row 5 -->
+                        <tr>
+                          <th>5</th>
+                          <td>hoisting done , with initializing <br> as ‘default’ value</td>
+                          <td>Hoisting is done , but not initialized <br> (this is the reason for error <br>when we access the let variable <br> before declaration/initialization</td>
+                          <td>Hoisting is done, but not initialized <br> (this is the reason for error <br> when we access the const variable <br> before declaration/initialization</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+
+              <p class="mt-2"> <span class="text-red-500 font-bold">Note:</span> Sometimes, users face the problem while working with the var variable as they change the value of it in the particular block. So, users should use the let and const keyword to declare a variable in JavaScript. </p>
+            </div>
+          </div>
+          <!-- end -->
+       <!-- start-Q.2 -->
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-blue-800 rounded-box text-center mt-2 ml-20 mr-20 text-stone-50">
+            <div class="collapse-title text-xl font-medium ">
+                Difference Between Regular Functions and Arrow Functions
+            </div>
+            <div class="collapse-content"> 
+                <hr>
+
+                <div class="overflow-x-auto mt-2">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Regular Functions</th>
+                          <th>Arrow Functions</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                          <th>1. Syntax</th>
+                          <td>One very basic difference is that <br> the Regular Functions uses function keyword.</td>
+                          <td>But Arrow Functions don’t <br> inspite it uses arrow symbol(=>).</td>
+                         
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                          <th>2. this keyword</th>
+                          <td>Regular function have its <br> their own this context</td>
+                          <td>But the Arrow function don’t <br> have their own. <br> Inside an Arrow function this value <br> hold the this value of outer function.</td>
+                          
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                          <th>3. Using new keyword</th>
+                          <td>Regular function are constructible and callable. <br> As it are constructible, they can be <br> called using the ‘new’ keyword.</td>
+                          <td>But the arrow functions are only <br> callable and not constructible. <br> Due to which we will get a <br> run-time error when trying to construct <br> a non-constructible arrow functions <br> using the new keyword.</td>
+                          
+                        </tr>
+                        <!-- row 4 -->
+                        <tr>
+                          <th>4. Implicit return</th>
+                          <td>While working with Regular functions return <br> expression statement is used to return <br> the result from the function. <br> It return statement is not available <br> inside the function then udefined is <br> returned from the function.</td>
+                          <td>But with Arrow function there is one <br> exception where return is not mendatory <br> to return result from the functions.</td>
+                       
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+              
+
+            </div>
+          </div>
+          <!-- end -->
+       <!-- start-Q.3 -->
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-blue-800 rounded-box text-center mt-2 ml-20 mr-20 text-stone-50">
+            <div class="collapse-title text-xl font-medium">
+                Differences Between forEach(), map(), filter(), find()
+            </div>
+            <div class="collapse-content"> 
+                <hr>
+
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>forEach()</th>
+                          <th>map()</th>
+                          <th>filter()</th>
+                          <th>find()</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                          <th>1</th>
+                          <td>Function .forEach() is another form of <br> just a plain for loop that can be <br> used to iterate through array items. <br> This case of a function is used <br> for more complex arrays, for example, <br> an array of objects with a lot of <br> entries than just an array of integers.</td>
+
+                          <td>Function .map() is a manipulative function that <br> can modify each element’s content in <br> an array that it is called on. <br> This function returns a new array with modified values, <br> the array that it is called on will stay still. <br> This function is useful for adding a little <br> change to an already existing array, <br> for example adding a property to an object or modifying it. <br> Its construction and use are identical to the <br> previous function .forEach() and both can be used interchangeably.</td>
+
+                          <td>Function .filter() is a search function that returns <br> all the elements that fulfil the assigned condition. <br> You can search by simple terms, <br> for example, that element is equal to a certain integer, <br> or by more advanced terms, for example, <br> searching for an object with certain property that <br> is equal to something. Both examples have <br> a very frequent use as a developer.</td>
+
+                          <td>Function .find() is also a search function like <br> the previous but they differ in one small detail — <br> this function returns only one match in an array. <br> If in an array is more than one result, <br> the function will return the first that has matched.</td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                          <th>2</th>
+                          <td>This function takes 1 parameter .forEach(callback). <br> The parameter callback can take up to 3 parameters element, <br> index & array (but only the element parameter is required, <br> the rest is optional).</td>
+
+                          <td>Just like the function .forEach(), this function also <br> takes only 1 parameter .map(callback). <br> The parameter callback can take up to <br> 3 parameters element, index & array <br> (but only the element parameter is required, <br> the rest is optional).</td>
+
+                          <td>Just like the function .forEach(), this function also <br> takes only 1 parameter .filter(callback). <br> The parameter callback can take up to <br> 3 parameters element, index & array <br>(but only the element parameter is required, <br> the rest is optional).</td>
+
+                          <td>Just like the function .forEach(), this function also <br> takes only 1 parameter .find(callback). <br> The parameter callback can take up to 3 parameters element, index & array <br> (but only the element parameter is required, <br> the rest is optional).</td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                          <th>3</th>
+                          <td>Example: Here is an example of looping through <br> an array of objects with name properties <br> and logging every name into the console:
+                            <img class="mt-2" src="images/forEach().png" alt="">
+                          </td>
+
+                          <td>Example: Here is an example of looping through <br> an array of objects with price properties <br> and adding a tax value of 5% to it:
+                            <img class="mt-2" src="images/map().png" alt="">
+                          </td>
+                         
+                          <td>Examples: Here is an example of searching by <br> simple terms through an array of integers and <br> finding which elements equal to the value 1:
+                            <img class="mt-2" src="images/filter().png" alt="">
+                          </td>
+                          <td>Example: Here is an example of searching by <br> more advanced terms in an array of objects and <br> finding an object with a property name that is equal to John Doe:
+                            <img class="mt-2" src="images/find().png" alt="">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+            </div>
+          </div>
+          <!-- end -->
+       <!-- start-Q.4 -->
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-blue-800 rounded-box text-center mt-2 ml-20 mr-20 text-stone-50">
+            <div class="collapse-title text-xl font-medium">
+                Why We Use Template String ?
+            </div>
+            <div class="collapse-content"> 
+                <hr>
+
+              <p class="text-left mt-2">Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements. Another great thing that comes with template strings are tags. Tags are functions that take a string and the decomposed parts of the string as parameters and are great for converting strings to different entities. The syntax for creating template strings is by using backticks to delimit them. For example, we can write: `This is a string`. This is a very simple example of a template string. 
+                <br>
+                Template strings are supported by almost all browsers that are regularly maintained today. The only major one that doesn’t support it right out of the box is Internet Explorer. However, browsers that do not support it can add it with Babel. Node.js also supports it in version 4 or later.
+                <br>
+                Template strings are the new standard for JavaScript strings. It is much better than strings before ES6 in that it supports interpolating expressions inside strings. We also have tagged templates which are just functions, with the decomposed parts of the template string as parameters. The constant string in the first parameter is the string in a decomposed array form, and the evaluated versions of the expressions in the order they appeared in the string are the remaining arguments. Tagged template functions can return any variable type.
+             <br>
+                With the raw property of a string, which is available in tags, can get the string with the escape characters unescaped.
+                
+                
+            </p>
+            </div>
+          </div>
+          <!-- end -->
+
+          <img class=" rounded-lg mt-10" src="images/qna.jpg" alt="">
+      </section>
+    </main>
+
+    <script src="js/category.js"></script>
+</body>
+</html>
