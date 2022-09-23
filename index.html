@@ -1,56 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trendy Now</title>
 
-    <!-- Daisy UI and Tailwind CSS --> 
-<link href="https://cdn.jsdelivr.net/npm/daisyui@2.28.0/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisy UI and Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.28.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+   
 
     <!-- End -->
-    
-</head>
+  </head>
 
-<nav>
-    <div class="navbar bg-base-100 mt-5 text-stone-50 ">
-        <div class="flex-1 ">
-          <a class="btn btn-ghost normal-case text-xl ml-20 mr-10 " href="index.html"><span class="text-blue-600 font-bold">Trendy</span>Now</a>
+  <nav>
+    <div class="navbar bg-base-100 mt-5 text-stone-50">
+      <div class="flex-1">
+        <a
+          class="btn btn-ghost normal-case text-xl ml-20 mr-10"
+          href="index.html"
+          ><span class="text-blue-600 font-bold">Trendy</span>Now</a
+        >
+      </div>
+      <div class="flex-none">
+        <div>
+          <h1 class="mr-5 btn btn-ghost"><a href="index.html">News</a></h1>
         </div>
-        <div class="flex-none">
-          <div >
-           <h1 class="mr-5 btn btn-ghost"><a href="index.html">News</a></h1>
-           
-          </div>
-          <div >
-            <h1 class="mr-5 btn btn-ghost"> <a href="blog.html">Blog</a></h1>
-            
-          </div>
-          
-          <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn btn-ghost btn-circle avatar mr-20">
-              <div class="w-10 rounded-full ">
-                <img src="https://placeimg.com/80/80/people" />
-              </div>
-            </label>
-           
-          </div>
+        <div>
+          <h1 class="mr-5 btn btn-ghost"><a href="blog.html">Blog</a></h1>
+        </div>
+
+        <div class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost btn-circle avatar mr-20">
+            <div class="w-10 rounded-full">
+              <img src="https://placeimg.com/80/80/people" />
+            </div>
+          </label>
         </div>
       </div>
-      <hr class="ml-20 mr-20 mt-3">
-</nav>
+    </div>
+    <hr class="ml-20 mr-20 mt-3" />
+  </nav>
 
-<body>
-    <header>
+  <header>
+    <section class="mt-5 mx-auto w-2/5">
+      <ul
+        id="all-menu"
+        class="menu menu-horizontal bg-blue-700 text-white font-bold rounded-box p-2 gap-2"
+      >
+      <li><a>Item 1</a></li>
+    
+    </ul>
+    </section>
+  </header>
 
-    </header>
-
+  <body>
     <main>
+<section>
+  <div class="card lg:card-side bg-base-100 shadow-xl mt-5 mb-20 mx-12 border border-blue-700 ">
+    <figure><img src="https://placeimg.com/400/400/arch" alt="Album"/></figure>
+    <div class="card-body">
+      <h1 class="card-title">New album is released!</h1>
+      <p class="font-serif
+      ">Click the button to listen on Spotiwhy app.</p>
+
+      <div class="flex items-center gap-20">
+        <div class="flex items-center">
+          <div class="avatar">
+            <div class="w-20 rounded-full justify-start">
+              <img src="https://placeimg.com/192/192/people" />
+            </div>
+          </div>
+    
+          <div class="ml-3 ">
+            <h6>Jane Cooper</h6>
+          <h6>Jan 10, 2022</h6>
+          </div>
+        </div>
+        
+        <div class="flex items-center ">
+          <img src="images/eye.png" alt="">
+          <h1 class="ml-1">1.5M</h1>
+        </div>
+
+        <div class="rating justify-center  ">
+          <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+          <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+        </div>
+
+        <div class="card-actions place-items-end ml-3 ">
+          <button class="btn btn-primary">Listen</button>
+        </div>
+
+
+      </div>
+
+     
+
+      
+
+    </div>
+  </div>
+</section>
+
 
     </main>
 
     <script src="js/category.js"></script>
-</body>
+  </body>
 </html>
