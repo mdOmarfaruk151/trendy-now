@@ -44,18 +44,26 @@ const displayAllNews = allNews =>{
                 <p class="card-text">${news.details.length > 500 ? news.details.slice(0,250) + '...': news.details}</p>
                 <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center">
-                        <img style="width: 24px; height: 24px" src="${news.author.img}" alt="">
+                        <img  style="width: 60px; height: 60px" src="${news.author.img}" alt="" class="rounded-5 border border-secondary border-3">
                         <div class="d-flex flex-column p-2">
-                            <p class="mb-0">${news.author.name ? news.author.name : 'No Author'}</p>
+                            <h6 class="mb-0">${news.author.name ? news.author.name : 'No Author'}</h6>
                             <p class="mb-0">${news.author.published_date}</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center gap-1">
                         <i class="fa-regular fa-eye"></i>
-                        <p class="mb-0">${news.total_view ? news.total_view : 'No views'}</p>
+                        <h6 class="mb-0">${news.total_view ? news.total_view : 'No views'}</h6>
                     </div>
+                    <div class="d-flex align-items-center gap-1">
+                    <i class="fa-solid fa-star text-warning"></i>
+                        <h6 class="mb-0">${news.rating.number ? news.rating.number : 'No Rating'}</h6>
+                    </div>
+                    
+                    
                     <div class="d-flex align-items-center">
-                        <i onclick="loadNewsDetails('${news._id}')" class="fa-sharp fa-solid fa-arrow-right" data-bs-toggle="modal" data-bs-target="#newsDetailModal"></i>
+                        <i onclick="loadNewsDetails('${news._id}')" class="fa-sharp fa-solid fa-arrow-right text-primary fs-3" data-bs-toggle="modal" data-bs-target="#newsDetailModal"></i>
+
+                      
                     </div>
                 </div>
             </div>
@@ -83,16 +91,21 @@ const displayNewsDetails = details =>{
     <p>${details.details}</p>
     <div class="d-flex justify-content-between">
         <div class="d-flex align-items-center">
-            <img style="width: 24px; height: 24px" src="${details.author.img}" alt="">
+            <img class="rounded-circle border border-secondary border-3" style="width: 80px; height: 80px" src="${details.author.img}" alt="">
             <div class="d-flex flex-column p-2">
-                <p class="mb-0">${details.author.name ? details.author.name : 'No Author'}</p>
+                <h6 class="mb-0">${details.author.name ? details.author.name : 'No Author'}</h6>
                 <p class="mb-0">${details.author.published_date}</p>
             </div>
         </div>
-        <div class="d-flex align-items-center">
-            <i class="fa-regular fa-eye"></i>
-            <p class="mb-0">${details.total_view ? details.total_view : 'No views'}</p>
+        <div class="d-flex align-items-center gap-1">
+            <i class="fa-regular fa-eye "></i>
+            <h6 class="mb-0">${details.total_view ? details.total_view : 'No views'}</h6>
         </div>
+        <div class="d-flex align-items-center gap-1 ">
+        <i class="fa-solid fa-star text-warning"></i>
+            <h6 class="mb-0">${details.rating.number ? details.rating.number : 'No Rating'}</h6>
+        </div>
+        
     </div>
     `
 }
