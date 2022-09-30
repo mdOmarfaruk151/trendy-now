@@ -6,17 +6,21 @@ const loadCategory = async () => {
   displayCategory(data.data.news_category);
 };
 
-const displayCategory = (categories) => {
+const displayCategory = (categories) => { 
   const categorytContainer = document.getElementById("news-Category");
   categories.forEach((category) => {
     const categoryDiv = document.createElement("div");
     categoryDiv.classList.add("col");
     categoryDiv.innerHTML = `
-        <p class="btn btn-primary" onclick="loadAllNews('${category.category_id}')">${category.category_name}</p>
+        <p id="on-click" class="btn btn-primary" onclick="loadAllNews('${category.category_id}')">${category.category_name}</p>
+        
         `;
 
     categorytContainer.appendChild(categoryDiv);
+    
   });
+
+ 
 };
 
 // Category Function End
@@ -24,13 +28,15 @@ const displayCategory = (categories) => {
 //All News Function Start
 
 const loadAllNews = async (id) => {
+    // start loader
+    toggleSpinner(true);
   const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
   const res = await fetch(url);
   const data = await res.json();
   displayAllNews(data.data);
 };
 
-const displayAllNews = (allNews) => {
+const displayAllNews = (allNews) => {  
   const allNewsContainer = document.getElementById("all-news-container");
   allNewsContainer.textContent = "";
   // display 6 news only
@@ -95,6 +101,9 @@ const displayAllNews = (allNews) => {
         `;
     allNewsContainer.appendChild(newsDiv);
   });
+   // end loader
+  toggleSpinner(false);
+
 };
 //All News Function End
 
@@ -105,6 +114,7 @@ const loadNewsDetails = async (id) => {
   displayNewsDetails(data.data[0]);
 };
 
+// display modal
 const displayNewsDetails = (details) => {
   console.log(details);
   const modalTitle = document.getElementById("newsDetailModalLabel");
@@ -140,5 +150,17 @@ const displayNewsDetails = (details) => {
     </div>
     `;
 };
+
+
+const toggleSpinner = isLoading =>{
+    const loaderSection = document.getElementById('loader');
+    if (isLoading){
+        loaderSection.classList.remove('d-none')
+    }
+    else{
+        loaderSection.classList.add('d-none')
+    }
+    
+}
 
 loadCategory();
