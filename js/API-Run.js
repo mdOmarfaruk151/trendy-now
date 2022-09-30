@@ -6,7 +6,8 @@ const loadCategory = async () => {
   displayCategory(data.data.news_category);
 };
 
-const displayCategory = (categories) => { 
+const displayCategory = (categories) => {
+  // document.getElementById("category-show").innerText = categories.;
   const categorytContainer = document.getElementById("news-Category");
   categories.forEach((category) => {
     const categoryDiv = document.createElement("div");
@@ -17,10 +18,7 @@ const displayCategory = (categories) => {
         `;
 
     categorytContainer.appendChild(categoryDiv);
-    
   });
-
- 
 };
 
 // Category Function End
@@ -28,19 +26,21 @@ const displayCategory = (categories) => {
 //All News Function Start
 
 const loadAllNews = async (id) => {
-    // start loader
-    toggleSpinner(true);
+  // start loader
+  toggleSpinner(true);
   const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
   const res = await fetch(url);
   const data = await res.json();
   displayAllNews(data.data);
 };
 
-const displayAllNews = (allNews) => {  
+const displayAllNews = (allNews) => {
   const allNewsContainer = document.getElementById("all-news-container");
   allNewsContainer.textContent = "";
-  // display 6 news only
-  allNews = allNews.slice(0, 10);
+  // display 20 news only
+  allNews = allNews.slice(0, 20);
+  // count how many news each catagory
+  document.getElementById("news-count").innerText = allNews.length;
   // display no news found
   const noNews = document.getElementById("no-found-massage");
   if (allNews.length === 0) {
@@ -48,6 +48,7 @@ const displayAllNews = (allNews) => {
   } else {
     noNews.classList.add("d-none");
   }
+
   // display all news
   allNews.forEach((news) => {
     const newsDiv = document.createElement("div");
@@ -101,9 +102,9 @@ const displayAllNews = (allNews) => {
         `;
     allNewsContainer.appendChild(newsDiv);
   });
-   // end loader
-  toggleSpinner(false);
 
+  // end loader
+  toggleSpinner(false);
 };
 //All News Function End
 
@@ -151,16 +152,14 @@ const displayNewsDetails = (details) => {
     `;
 };
 
-
-const toggleSpinner = isLoading =>{
-    const loaderSection = document.getElementById('loader');
-    if (isLoading){
-        loaderSection.classList.remove('d-none')
-    }
-    else{
-        loaderSection.classList.add('d-none')
-    }
-    
-}
+// loder function
+const toggleSpinner = (isLoading) => {
+  const loaderSection = document.getElementById("loader");
+  if (isLoading) {
+    loaderSection.classList.remove("d-none");
+  } else {
+    loaderSection.classList.add("d-none");
+  }
+};
 
 loadCategory();

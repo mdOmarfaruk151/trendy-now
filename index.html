@@ -4,17 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Icon -->
-    <link rel="shortcut icon" href="images/T.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/T.png" type="image/x-icon" />
     <!-- Title -->
     <title>Trendy Now</title>
-<!-- Font Awesome Link -->
+    <!-- Font Awesome Link -->
     <script
       src="https://kit.fontawesome.com/11d580ef3d.js"
       crossorigin="anonymous"
     ></script>
 
     <!-- Bootstrap Link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
 
     <!--Navbar  -->
   </head>
@@ -26,9 +29,9 @@
         </h2></a
       >
 
-      <div class="d-flex gap-3">
-        <a class="mt-4 btn btn-primary" href="index.html"><h4>News</h4></a>
-        <a class="mt-4 btn btn-primary" href="blog.html"><h4>Blog</h4></a>
+      <div class="d-flex gap-3 ">
+        <a class="mt-4 p-2 btn btn-primary" href="index.html"><h4>News</h4></a>
+        <a class="mt-4 p-2 btn btn-primary" href="blog.html"><h4>Blog</h4></a>
         <img
           class="rounded-circle border border-secondary border-3 w-0"
           src="images/profile.png"
@@ -41,68 +44,89 @@
   <!-- hr -->
   <hr class="container border border-secondary border-2 opacity-50 mb-4 mt-0" />
 
-  <body >
+  <body>
     <!-- Category -->
     <header class="container">
-        <div id="news-Category" class="row row-cols-auto  justify-content-between rounded-2 ">
-          
-          
-        </div>
+      <div
+        id="news-Category"
+        class="row row-cols-auto justify-content-between rounded-2 "
+      ></div>
     </header>
-<!-- hr -->
-    <hr class="container border border-secondary border-2 opacity-50 mb-4 mt-0" />
-<!-- all news -->
+    <!-- hr -->
+    <hr
+      class="container border border-secondary border-2 opacity-50 mb-3 mt-0"
+    />
+    <!-- all news -->
     <main class="container">
-<!-- no found-massage -->
+      <!-- count items -->
+      <section>
+        <div class="text-center mb-3 bg-primary p-2 rounded-3">
+          <h4 class="text-white"><span id="news-count" class="text-warning">0 </span> News Found For This Category</h4>
+        </div>
+      </section>
+      <!-- no found-massage -->
       <div id="no-found-massage" class="mt-4 text-center d-none">
-        <img src="images/seedown.gif" alt="">
-        <h3 class="text-danger ">No News Found !! Please Try Another Category. </h3>
-        <img src="images/Can-not-Find.png" alt="">
+        <img src="images/seedown.gif" alt="" />
+        <h3 class="text-danger">
+          No News Found !! Please Try Another <span id="category-show">Category.</span>
+        </h3>
+        <img src="images/Can-not-Find.png" alt="" />
       </div>
-<!--all news start  -->
-      <div id="all-news-container" class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+      <!--all news start  -->
+      <div
+        id="all-news-container"
+        class="row row-cols-1 row-cols-md-2 g-4 mb-5"
+      ></div>
 
-      </div>
-
-    
-        <!-- Modal -->
-        <div class="modal fade" id="newsDetailModal" tabindex="-1" aria-labelledby="newsDetailModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="newsDetailModalLabel"></h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div id="modal-news-detail" class="modal-body">
-                      
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  </div>
-              </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="newsDetailModal"
+        tabindex="-1"
+        aria-labelledby="newsDetailModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="newsDetailModalLabel"></h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div id="modal-news-detail" class="modal-body"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
           </div>
+        </div>
       </div>
 
       <!-- Spinner -->
       <section id="loader" class="d-none">
-          <div style="height: 100px;" class="d-flex justify-content-center align-items-center text-success">
-              <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
+        <div
+          style="height: 100px"
+          class="d-flex justify-content-center align-items-center text-success"
+        >
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>
+        </div>
       </section>
-
-
-  
-
-
-
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
     "></script>
 
-    
     <script src="js/API-Run.js"></script>
   </body>
 </html>
